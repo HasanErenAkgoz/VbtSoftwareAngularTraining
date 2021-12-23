@@ -1,0 +1,24 @@
+<div class="col">
+  <br />
+  <h4 class="page-header text text-center">Kategoriler</h4>
+</div>
+<ul class="list-group">
+
+  <li class="list-group-item"
+  routerLinkActive="active"
+  routerLink="products" style="cursor: pointer;"
+  [routerLinkActiveOptions]="{exact:true}"
+  >
+ Tümünü Listele
+  </li>
+
+  <li
+    *ngFor="let category of categories"
+    (click)="onSelect(category)"
+    class="list-group-item"
+    routerLinkActive="active"
+    routerLink="products/{{ category.categoryId }}" style="cursor: pointer;"
+  >
+    {{ category.categoryName }}
+  </li>
+</ul>

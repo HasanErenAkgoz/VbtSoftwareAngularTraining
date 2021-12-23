@@ -1,0 +1,35 @@
+<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+  <li class="nav-item dropdown">
+    <a
+      class="nav-link"
+      [class.dropdown-toggle]="totalCartItem > 0"
+      href="#"
+      id="navbarDropdown"
+      role="button"
+      data-bs-toggle="dropdown"
+      aria-expanded="false"
+    >
+      Sepetim:
+      <span *ngIf="totalCartItem > 0">
+        {{ totalCartItemPrice | currency: "₺" }} {{ totalCartItem }}</span
+      >
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+      <li class="dropdown-item" *ngIf="totalCartItem == 0">Sepet Boş</li>
+      <li *ngFor="let item of cartItems">
+        <a class="dropdown-item" href="#"
+          >{{ item.Product.productName | uppercase }} - {{ item.Quentity }}
+        </a>
+      </li>
+      <div class="border-bottom my-2"></div>
+      <div class="text-center">
+        <strong>
+          <span routerLink="my-cart">
+            Sepetim
+          </span>
+        </strong>
+      </div>
+    </ul>
+  </li>
+
+</ul>
