@@ -12,5 +12,7 @@ Projeyi çalıştırmak için:
 To realize the project:
 
 1=> Download the project and extract it from the rar file.
+<br>
 2=> After opening the project with vs code, npm i in the terminal.
+<br>
 3=> After the packages of the project are installed, run Ng serve --open in the component.
